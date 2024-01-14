@@ -1,15 +1,14 @@
-#ifndef MidiTrack_H
-#define MidiTrack_H
+#ifndef AudioTrack_H
+#define AudioTrack_H
 
 #include <vector>
 #include <string>
 #include <paintable.h>
 
-class MidiTrack : public Paintable
+class AudioTrack : public Paintable
 {
-
 public:
-  MidiTrack(double height, double width, const Vector2D &position);
+  AudioTrack(double height, double width, const Vector2D &position);
   void paint() const override;
 
 private:
