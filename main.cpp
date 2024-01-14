@@ -27,8 +27,8 @@ int main()
     return -1;
   }
 
-  Vector2D drackPosition = Vector2D(-1, 0.0);
-  DrumRack drumrack = DrumRack(0.7, 2, drackPosition);
+  Vector2D drackPosition = Vector2D(-0.98, 0.0);
+  DrumRack drumrack = DrumRack(0.7, 1.96, drackPosition);
 
   // Make the window's context current
   glfwMakeContextCurrent(window);
