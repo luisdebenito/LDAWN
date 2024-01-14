@@ -9,7 +9,6 @@ DrumTrack::DrumTrack(double height, double width, const Vector2D &position)
   {
     Vector2D bitPosition((width / num_bits) * i + position.getX(), position.getY());
     Bit bitObject(height, (width / num_bits), bitPosition, Color(0.4, 0.2, 0.1));
-
     bits.push_back(bitObject);
   }
 }

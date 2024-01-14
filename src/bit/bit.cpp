@@ -1,6 +1,5 @@
 #include <bit.h>
 #include <GLFW/glfw3.h>
-#include <iostream>
 
 Bit::Bit(double height, double width, const Vector2D &position, const Color &color)
     : Paintable(height, width, position, color)

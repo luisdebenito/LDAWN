@@ -9,6 +9,7 @@ class Paintable
 public:
   Paintable(double height, double width, const Vector2D &position, const Color &color);
   Paintable(double height, double width, const Vector2D &position);
+  Paintable();
   virtual ~Paintable() = default;
   virtual void paint() const = 0;
   double getHeight() const;

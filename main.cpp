@@ -1,19 +1,14 @@
 #include <GLFW/glfw3.h>
-#include <vector2D.h>
-#include <drumRack.h>
-#include <color.h>
-
-// glColor4f(1, 1, 1, 1);para el alpha
+#include <panel.h>
 
 int main()
 {
-  // Initialize GLFW
   if (!glfwInit())
   {
     return -1;
   }
 
-  GLFWmonitor *MyMonitor = glfwGetPrimaryMonitor(); // The primary monitor.. Later Occulus?..
+  GLFWmonitor *MyMonitor = glfwGetPrimaryMonitor();
 
   const GLFWvidmode *mode = glfwGetVideoMode(MyMonitor);
 
@@ -27,8 +22,7 @@ int main()
     return -1;
   }
 
-  Vector2D drackPosition = Vector2D(-0.98, 0.0);
-  DrumRack drumrack = DrumRack(0.7, 1.96, drackPosition);
+  const Panel panel = Panel();
 
   // Make the window's context current
   glfwMakeContextCurrent(window);
@@ -38,7 +32,7 @@ int main()
   {
     glClear(GL_COLOR_BUFFER_BIT);
 
-    drumrack.paint();
+    panel.paint();
 
     glfwSwapBuffers(window);
 
