@@ -1,7 +1,7 @@
 #ifndef BIT_H
 #define BIT_H
 
-#include "paintable.h"
+#include <paintable.h>
 
 class Bit : public Paintable
 {

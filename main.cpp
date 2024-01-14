@@ -1,6 +1,9 @@
 #include <GLFW/glfw3.h>
-#include <bit.h>
 #include <vector2D.h>
+#include <drumRack.h>
+#include <color.h>
+
+// glColor4f(1, 1, 1, 1);para el alpha
 
 int main()
 {
@@ -10,8 +13,13 @@ int main()
     return -1;
   }
 
-  // Create a fullscreen windowed mode window and its OpenGL context
-  GLFWwindow *window = glfwCreateWindow(400, 400, "LDAWN", glfwGetPrimaryMonitor(), NULL);
+  GLFWmonitor *MyMonitor = glfwGetPrimaryMonitor(); // The primary monitor.. Later Occulus?..
+
+  const GLFWvidmode *mode = glfwGetVideoMode(MyMonitor);
+
+  GLFWwindow *window = glfwCreateWindow(mode->width,
+                                        mode->height, "LDAWN",
+                                        MyMonitor, nullptr);
 
   if (!window)
   {
@@ -19,18 +27,23 @@ int main()
     return -1;
   }
 
+  Vector2D drackPosition = Vector2D(-1, 0.4);
+  DrumRack drumrack = DrumRack(0.3, 2, drackPosition);
+
   // Make the window's context current
   glfwMakeContextCurrent(window);
 
-  Vector2D bitPosition(0.0, 0.0);
-  Color color(1.0, 0, 0);
-  Bit bitObject(20.0, 20.0, bitPosition, color);
   // Loop until the user closes the window
   while (glfwGetKey(window, GLFW_KEY_ESCAPE) != GLFW_PRESS)
   {
     glClear(GL_COLOR_BUFFER_BIT);
+    glBegin(GL_POINTS);
 
-    bitObject.paint();
+    glColor3d(1.0, 0.0, 0.0);
+    glVertex2f(0.9, -0.9);
+    glEnd();
+
+    drumrack.paint();
 
     glfwSwapBuffers(window);
 

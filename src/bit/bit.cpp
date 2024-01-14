@@ -1,5 +1,6 @@
-#include "bit.h"
+#include <bit.h>
 #include <GLFW/glfw3.h>
+#include <iostream>
 
 Bit::Bit(double height, double width, const Vector2D &position, const Color &color)
     : Paintable(height, width, position, color)
@@ -8,9 +9,7 @@ Bit::Bit(double height, double width, const Vector2D &position, const Color &col
 
 void Bit::paint() const
 {
-
-    // Set the color, you can customize this
-    glColor3d(color.getR(), color.getG(), color.getB()); // Red color
+    glColor3d(color.getR(), color.getG(), color.getB());
 
     // Begin drawing the square
     glBegin(GL_POLYGON);
