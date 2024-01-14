@@ -7,8 +7,7 @@ DrumTrack::DrumTrack(double height, double width, const Vector2D &position)
   for (int i = 0; i < num_bits; ++i)
   {
     Vector2D bitPosition((width / num_bits) * i + position.getX(), position.getY());
-    Color bitColor(1.0, 0.0, 0.0);
-    Bit bitObject(height, (width / num_bits), bitPosition, bitColor);
+    Bit bitObject(height, (width / num_bits), bitPosition, generateRandomColor());
     bits.push_back(bitObject);
   }
 }
@@ -19,4 +18,17 @@ void DrumTrack::paint() const
   {
     bit.paint();
   }
+}
+
+Color DrumTrack::generateRandomColor()
+{
+  float red = randomFloat();
+  float green = randomFloat();
+  float blue = randomFloat();
+  return Color(red, green, blue);
+}
+
+float DrumTrack::randomFloat()
+{
+  return static_cast<float>(rand()) / static_cast<float>(RAND_MAX);
 }

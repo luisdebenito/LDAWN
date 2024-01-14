@@ -16,9 +16,9 @@ void Bit::paint() const
 
     // Specify the vertices of the square
     glVertex2d(position.getX(), position.getY());
-    glVertex2d(position.getX() + width, position.getY());
+    glVertex2d((position.getX() + width), position.getY());
+    glVertex2d((position.getX() + width), position.getY() + height);
     glVertex2d(position.getX(), position.getY() + height);
-    glVertex2d(position.getX() + width, position.getY() + height);
 
     // End drawing the square
     glEnd();

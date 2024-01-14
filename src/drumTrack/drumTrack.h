@@ -14,6 +14,8 @@ public:
   void paint() const override;
 
 private:
+  Color generateRandomColor();
+  float randomFloat();
   std::vector<Bit> bits;
   int num_bits = 32;
 };
