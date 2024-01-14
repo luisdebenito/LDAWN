@@ -3,9 +3,6 @@
 # Ensure that the script is executed from the directory containing the C++ files
 cd "$(dirname "$0")" || exit
 
-# Compiler command and options
-
-
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Find all .cpp files in src directory and its subdirectories
