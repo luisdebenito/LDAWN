@@ -3,6 +3,7 @@
 
 #include <paintable.h>
 #include <drumRack.h>
+#include <bpmLabel.h>
 
 class Panel : public Paintable
 {
@@ -12,6 +13,7 @@ public:
 
 private:
   DrumRack drumRack;
+  BpmLabel bpmLabel;
 };
 
 #endif

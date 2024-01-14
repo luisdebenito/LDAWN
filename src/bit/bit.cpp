@@ -4,6 +4,8 @@
 Bit::Bit(double height, double width, const Vector2D &position, const Color &color)
     : Paintable(height, width, position, color)
 {
+    paintableHeight = height + 0.005;
+    paintableWidth = width - 0.005;
 }
 
 void Bit::paint() const
@@ -15,9 +17,9 @@ void Bit::paint() const
 
     // Specify the vertices of the square
     glVertex2d(position.getX(), position.getY());
-    glVertex2d((position.getX() + width) - 0.005, position.getY());
-    glVertex2d((position.getX() + width) - 0.005, position.getY() + height - 0.005);
-    glVertex2d(position.getX(), position.getY() + height - 0.005);
+    glVertex2d(position.getX() + paintableWidth, position.getY());
+    glVertex2d(position.getX() + paintableWidth, position.getY() - paintableHeight);
+    glVertex2d(position.getX(), position.getY() - paintableHeight);
 
     // End drawing the square
     glEnd();
