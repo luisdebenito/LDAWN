@@ -4,7 +4,8 @@
 MidiTrack::MidiTrack(double height, double width, const Vector2D &position)
     : Paintable(height, width, position)
 {
-  color = generateRandomColor();
+  color = Color(169.0 / 256, 223.0 / 256, 191.0 / 256);
+  paintableHeight = height - 0.006;
 }
 
 void MidiTrack::paint() const
@@ -20,24 +21,11 @@ void MidiTrack::paint() const
   // Specify the vertices of the square
   glVertex2d(position.getX(), position.getY());
   glVertex2d((position.getX() + width), position.getY());
-  glVertex2d((position.getX() + width), position.getY() - height);
-  glVertex2d(position.getX(), position.getY() - height);
+  glVertex2d((position.getX() + width), position.getY() - paintableHeight);
+  glVertex2d(position.getX(), position.getY() - paintableHeight);
 
   // End drawing the square
   glEnd();
 
   glDisable(GL_BLEND);
-}
-
-Color MidiTrack::generateRandomColor()
-{
-  float red = randomFloat();
-  float green = randomFloat();
-  float blue = randomFloat();
-  return Color(red, green, blue);
-}
-
-float MidiTrack::randomFloat()
-{
-  return static_cast<float>(rand()) / static_cast<float>(RAND_MAX);
 }

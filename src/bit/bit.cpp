@@ -4,7 +4,7 @@
 Bit::Bit(double height, double width, const Vector2D &position, const Color &color)
     : Paintable(height, width, position, color)
 {
-    paintableHeight = height + 0.005;
+    paintableHeight = height - 0.006;
     paintableWidth = width - 0.005;
 }
 

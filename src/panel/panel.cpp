@@ -2,10 +2,11 @@
 #include <GLFW/glfw3.h>
 
 Panel::Panel() : Paintable(),
-                 drumRack(0.7, 1.96, Vector2D(-0.98, 0.25)),
+                 drumRack(0.7, 1.94, Vector2D(-0.97, 0.75)),
                  bpmLabel(0.18, 0.4, Vector2D(-0.2, 1)),
-                 midiRack(0.5, 1.96, Vector2D(-0.98, -0.3)),
-                 audioRack(0.4, 1.96, Vector2D(-0.98, -0.7))
+                 midiRack(0.5, 1.94, Vector2D(-0.97, 0.02)),
+                 audioRack(0.4, 1.94, Vector2D(-0.97, -0.5)),
+                 playPointer(1.7, 0.002, Vector2D(-0.97, 0.79))
 {
 }
 
@@ -15,4 +16,5 @@ void Panel::paint() const
   bpmLabel.paint();
   midiRack.paint();
   audioRack.paint();
+  playPointer.paint();
 }

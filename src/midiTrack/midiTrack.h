@@ -1,8 +1,6 @@
 #ifndef MidiTrack_H
 #define MidiTrack_H
 
-#include <vector>
-#include <string>
 #include <paintable.h>
 
 class MidiTrack : public Paintable
@@ -13,8 +11,7 @@ public:
   void paint() const override;
 
 private:
-  Color generateRandomColor();
-  float randomFloat();
+  double paintableHeight;
 };
 
 #endif // TRACK_H

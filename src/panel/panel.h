@@ -6,6 +6,7 @@
 #include <bpmLabel.h>
 #include <audioRack.h>
 #include <midiRack.h>
+#include <playPointer.h>
 
 class Panel : public Paintable
 {
@@ -18,6 +19,7 @@ private:
   BpmLabel bpmLabel;
   MidiRack midiRack;
   AudioRack audioRack;
+  PlayPointer playPointer;
 };
 
 #endif

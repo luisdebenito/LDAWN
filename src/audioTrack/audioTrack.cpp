@@ -4,7 +4,8 @@
 AudioTrack::AudioTrack(double height, double width, const Vector2D &position)
     : Paintable(height, width, position)
 {
-  color = generateRandomColor();
+  color = Color(170 / 256, 183.0 / 256, 184.0 / 256);
+  paintableHeight = height - 0.006;
 }
 
 void AudioTrack::paint() const
@@ -20,24 +21,11 @@ void AudioTrack::paint() const
   // Specify the vertices of the square
   glVertex2d(position.getX(), position.getY());
   glVertex2d((position.getX() + width), position.getY());
-  glVertex2d((position.getX() + width), position.getY() - height);
-  glVertex2d(position.getX(), position.getY() - height);
+  glVertex2d((position.getX() + width), position.getY() - paintableHeight);
+  glVertex2d(position.getX(), position.getY() - paintableHeight);
 
   // End drawing the square
   glEnd();
 
   glDisable(GL_BLEND);
-}
-
-Color AudioTrack::generateRandomColor()
-{
-  float red = randomFloat();
-  float green = randomFloat();
-  float blue = randomFloat();
-  return Color(red, green, blue);
-}
-
-float AudioTrack::randomFloat()
-{
-  return static_cast<float>(rand()) / static_cast<float>(RAND_MAX);
 }

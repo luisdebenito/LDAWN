@@ -6,7 +6,7 @@ AudioRack::AudioRack(double height, double width, const Vector2D &position)
 {
   for (int i = 0; i < num_tracks; ++i)
   {
-    Vector2D bitPosition(position.getX(), (height / num_tracks) * i + position.getY());
+    Vector2D bitPosition(position.getX(), position.getY() - (height / num_tracks) * i);
     AudioTrack midiTrackObject(height / num_tracks, width, bitPosition);
     tracks.push_back(midiTrackObject);
   }

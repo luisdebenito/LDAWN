@@ -1,8 +1,6 @@
 #ifndef AudioTrack_H
 #define AudioTrack_H
 
-#include <vector>
-#include <string>
 #include <paintable.h>
 
 class AudioTrack : public Paintable
@@ -12,8 +10,7 @@ public:
   void paint() const override;
 
 private:
-  Color generateRandomColor();
-  float randomFloat();
+  double paintableHeight;
 };
 
 #endif // TRACK_H
