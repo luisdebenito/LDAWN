@@ -4,7 +4,7 @@
 DrumTrack::DrumTrack(double height, double width, const Vector2D &position)
     : Paintable(height, width, position)
 {
-  color = Color(1, 0, 0);
+  color = Color(0, 0, 0);
   for (int i = 0; i < num_bits; ++i)
   {
     Vector2D bitPosition((width / num_bits) * i + position.getX(), position.getY());
@@ -23,7 +23,7 @@ void DrumTrack::paint() const
   glEnable(GL_BLEND);
   glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-  glColor4f(color.getR(), color.getG(), color.getB(), 0.2);
+  glColor4f(color.getR(), color.getG(), color.getB(), 0.8);
 
   // Begin drawing the square
   glBegin(GL_POLYGON);
