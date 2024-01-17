@@ -10,7 +10,7 @@ class DrumTrack : public Paintable
 {
 
 public:
-  DrumTrack(double height, double width, const Vector2D &position);
+  DrumTrack(float height, float width, const Vector2D &position);
   void paint() const override;
 
 private:

@@ -4,13 +4,13 @@
 class Vector2D
 {
 public:
-  Vector2D(double x, double y);
-  double getX() const;
-  double getY() const;
+  Vector2D(float x, float y);
+  float getX() const;
+  float getY() const;
 
 private:
-  double x;
-  double y;
+  float x;
+  float y;
 };
 
 #endif

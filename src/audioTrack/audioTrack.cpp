@@ -1,7 +1,7 @@
 #include <audioTrack.h>
 #include <GLFW/glfw3.h>
 
-AudioTrack::AudioTrack(double height, double width, const Vector2D &position)
+AudioTrack::AudioTrack(float height, float width, const Vector2D &position)
     : Paintable(height, width, position)
 {
   color = Color(170 / 256, 183.0 / 256, 184.0 / 256);

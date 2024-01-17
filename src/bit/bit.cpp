@@ -1,7 +1,7 @@
 #include <bit.h>
 #include <GLFW/glfw3.h>
 
-Bit::Bit(double height, double width, const Vector2D &position, const Color &color)
+Bit::Bit(float height, float width, const Vector2D &position, const Color &color)
     : Paintable(height, width, position, color)
 {
     paintableHeight = height - 0.006;

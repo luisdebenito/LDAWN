@@ -7,7 +7,7 @@
 class PlayPointer : public Paintable
 {
 public:
-  PlayPointer(double height, double width, const Vector2D &position);
+  PlayPointer(float height, float width, const Vector2D &position);
   void paint() const override;
 };
 

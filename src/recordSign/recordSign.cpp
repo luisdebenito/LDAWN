@@ -3,7 +3,7 @@
 #include <iostream>
 #include <cmath>
 
-RecordSign::RecordSign(double height, double width, const Vector2D &position)
+RecordSign::RecordSign(float height, float width, const Vector2D &position)
     : Paintable(height, width, position, Color(0.5, 0.0, 0.0))
 {
 }
@@ -15,9 +15,9 @@ void RecordSign::paint() const
   glVertex2f(position.getX(), position.getY()); // Center of circle
   for (int i = 0; i <= 15; i++)
   {
-    double angle = (2.0f * M_PI * i) / 15;
-    double dx = height * cos(angle);
-    double dy = height * sin(angle);
+    float angle = (2.0f * M_PI * i) / 15;
+    float dx = height * cos(angle);
+    float dy = height * sin(angle);
     glVertex2f(position.getX() + dx, position.getY() + dy);
   }
   glEnd();

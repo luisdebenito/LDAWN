@@ -6,11 +6,11 @@
 class AudioTrack : public Paintable
 {
 public:
-  AudioTrack(double height, double width, const Vector2D &position);
+  AudioTrack(float height, float width, const Vector2D &position);
   void paint() const override;
 
 private:
-  double paintableHeight;
+  float paintableHeight;
 };
 
 #endif // TRACK_H

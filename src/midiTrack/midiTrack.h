@@ -7,11 +7,11 @@ class MidiTrack : public Paintable
 {
 
 public:
-  MidiTrack(double height, double width, const Vector2D &position);
+  MidiTrack(float height, float width, const Vector2D &position);
   void paint() const override;
 
 private:
-  double paintableHeight;
+  float paintableHeight;
 };
 
 #endif // TRACK_H

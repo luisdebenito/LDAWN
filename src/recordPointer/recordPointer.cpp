@@ -1,7 +1,7 @@
 #include <GLFW/glfw3.h>
 #include <recordPointer.h>
 
-RecordPointer::RecordPointer(double height, double width, const Vector2D &position)
+RecordPointer::RecordPointer(float height, float width, const Vector2D &position)
     : Paintable(height, width, position)
 {
   color = Color(123.0 / 256, 147.0 / 256, 98.0 / 256);

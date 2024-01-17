@@ -1,6 +1,6 @@
 #include <vector2D.h>
 
-Vector2D::Vector2D(double x, double y) : x(x), y(y) {}
+Vector2D::Vector2D(float x, float y) : x(x), y(y) {}
 
-double Vector2D::getX() const { return x; }
-double Vector2D::getY() const { return y; }
+float Vector2D::getX() const { return x; }
+float Vector2D::getY() const { return y; }

@@ -8,7 +8,7 @@
 class AudioRack : public Paintable
 {
 public:
-  AudioRack(double height, double width, const Vector2D &position);
+  AudioRack(float height, float width, const Vector2D &position);
   void paint() const override;
 
 private:

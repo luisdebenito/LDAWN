@@ -4,15 +4,15 @@
 class Color
 {
 public:
-  Color(double r, double g, double b);
-  double getR() const;
-  double getG() const;
-  double getB() const;
+  Color(float r, float g, float b);
+  float getR() const;
+  float getG() const;
+  float getB() const;
 
 private:
-  double r;
-  double g;
-  double b;
+  float r;
+  float g;
+  float b;
 };
 
 #endif

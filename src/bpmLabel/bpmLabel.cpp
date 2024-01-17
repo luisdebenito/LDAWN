@@ -2,7 +2,7 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 
-BpmLabel::BpmLabel(double height, double width, const Vector2D &position)
+BpmLabel::BpmLabel(float height, float width, const Vector2D &position)
     : Paintable(height, width, position, Color(0.3, 0.0, 0.0))
 {
 }
@@ -10,7 +10,7 @@ BpmLabel::BpmLabel(double height, double width, const Vector2D &position)
 void BpmLabel::paint() const
 {
   glColor3d(color.getR(), color.getG(), color.getB());
-  const double side = 0.015;
+  const float side = 0.015;
 
   for (int j = 0; j < 5; ++j)
   {
@@ -27,7 +27,7 @@ int BpmLabel::getValue()
   return value;
 }
 
-void BpmLabel::paintSquares(const Vector2D &pos, double side) const
+void BpmLabel::paintSquares(const Vector2D &pos, float side) const
 {
   glBegin(GL_POLYGON);
   glVertex2d(pos.getX(), pos.getY());

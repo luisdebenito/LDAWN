@@ -6,7 +6,7 @@
 class RecordSign : public Paintable
 {
 public:
-  RecordSign(double height, double width, const Vector2D &position);
+  RecordSign(float height, float width, const Vector2D &position);
   void paint() const override;
 };
 

@@ -7,18 +7,18 @@
 class Paintable
 {
 public:
-  Paintable(double height, double width, const Vector2D &position, const Color &color);
-  Paintable(double height, double width, const Vector2D &position);
+  Paintable(float height, float width, const Vector2D &position, const Color &color);
+  Paintable(float height, float width, const Vector2D &position);
   Paintable();
   virtual ~Paintable() = default;
   virtual void paint() const = 0;
-  double getHeight() const;
-  double getWidth() const;
+  float getHeight() const;
+  float getWidth() const;
   const Vector2D &getPosition() const;
 
 protected:
-  double height;
-  double width;
+  float height;
+  float width;
   Vector2D position;
   Color color;
 };

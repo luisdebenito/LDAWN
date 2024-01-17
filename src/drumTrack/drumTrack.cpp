@@ -1,7 +1,7 @@
 #include <drumTrack.h>
 #include <GLFW/glfw3.h>
 
-DrumTrack::DrumTrack(double height, double width, const Vector2D &position)
+DrumTrack::DrumTrack(float height, float width, const Vector2D &position)
     : Paintable(height, width, position)
 {
   color = Color(0, 0, 0);

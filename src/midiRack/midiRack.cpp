@@ -1,7 +1,7 @@
 #include <midiRack.h>
 #include <GLFW/glfw3.h>
 
-MidiRack::MidiRack(double height, double width, const Vector2D &position)
+MidiRack::MidiRack(float height, float width, const Vector2D &position)
     : Paintable(height, width, position)
 {
   for (int i = 0; i < num_tracks; ++i)

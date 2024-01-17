@@ -8,7 +8,7 @@
 class MidiRack : public Paintable
 {
 public:
-  MidiRack(double height, double width, const Vector2D &position);
+  MidiRack(float height, float width, const Vector2D &position);
   void paint() const override;
 
 private:

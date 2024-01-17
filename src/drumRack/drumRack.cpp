@@ -1,7 +1,7 @@
 #include <drumRack.h>
 #include <GLFW/glfw3.h>
 
-DrumRack::DrumRack(double height, double width, const Vector2D &position)
+DrumRack::DrumRack(float height, float width, const Vector2D &position)
     : Paintable(height, width, position)
 {
   for (int i = 0; i < num_tracks; ++i)

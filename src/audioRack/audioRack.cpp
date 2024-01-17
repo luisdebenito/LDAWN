@@ -1,7 +1,7 @@
 #include <audioRack.h>
 #include <GLFW/glfw3.h>
 
-AudioRack::AudioRack(double height, double width, const Vector2D &position)
+AudioRack::AudioRack(float height, float width, const Vector2D &position)
     : Paintable(height, width, position)
 {
   for (int i = 0; i < num_tracks; ++i)

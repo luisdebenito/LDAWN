@@ -7,7 +7,7 @@
 class RecordPointer : public Paintable
 {
 public:
-  RecordPointer(double height, double width, const Vector2D &position);
+  RecordPointer(float height, float width, const Vector2D &position);
   void paint() const override;
 };
 

@@ -8,7 +8,7 @@
 class DrumRack : public Paintable
 {
 public:
-  DrumRack(double height, double width, const Vector2D &position);
+  DrumRack(float height, float width, const Vector2D &position);
   void paint() const override;
 
 private:

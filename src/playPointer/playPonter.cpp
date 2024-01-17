@@ -1,7 +1,7 @@
 #include <GLFW/glfw3.h>
 #include <playPointer.h>
 
-PlayPointer::PlayPointer(double height, double width, const Vector2D &position)
+PlayPointer::PlayPointer(float height, float width, const Vector2D &position)
     : Paintable(height, width, position)
 {
     color = Color(1.0, 0, 0);

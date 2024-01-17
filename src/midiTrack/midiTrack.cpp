@@ -1,7 +1,7 @@
 #include <midiTrack.h>
 #include <GLFW/glfw3.h>
 
-MidiTrack::MidiTrack(double height, double width, const Vector2D &position)
+MidiTrack::MidiTrack(float height, float width, const Vector2D &position)
     : Paintable(height, width, position)
 {
   color = Color(169.0 / 256, 223.0 / 256, 191.0 / 256);
