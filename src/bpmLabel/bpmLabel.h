@@ -12,6 +12,7 @@ public:
 
 private:
   int value = 120;
+  void paintSquares(const Vector2D &pos, double side) const;
 };
 
 #endif // BIT_H

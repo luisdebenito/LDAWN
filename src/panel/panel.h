@@ -8,6 +8,7 @@
 #include <midiRack.h>
 #include <playPointer.h>
 #include <recordPointer.h>
+#include <recordSign.h>
 
 class Panel : public Paintable
 {
@@ -22,6 +23,7 @@ private:
   AudioRack audioRack;
   PlayPointer playPointer;
   RecordPointer recordPointer;
+  RecordSign recordSign;
 };
 
 #endif
