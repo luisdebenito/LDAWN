@@ -1,5 +1,4 @@
 #include <audioRack.h>
-#include <GLFW/glfw3.h>
 
 AudioRack::AudioRack(float height, float width, const Vector2D &position)
     : Paintable(height, width, position)
@@ -17,5 +16,17 @@ void AudioRack::paint() const
   for (const AudioTrack &track : tracks)
   {
     track.paint();
+  }
+}
+
+void AudioRack::handleEvents(GLFWwindow *window) const
+{
+  for (int i = 0; i < num_tracks; i++)
+  {
+    if (glfwGetKey(window, GLFW_KEY_8 + i) == GLFW_PRESS)
+    {
+      tracks[i].changeActive();
+      return;
+    }
   }
 }

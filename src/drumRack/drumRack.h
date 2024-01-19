@@ -4,15 +4,17 @@
 #include <vector>
 #include <paintable.h>
 #include <drumTrack.h>
+#include <GLFW/glfw3.h>
 
 class DrumRack : public Paintable
 {
 public:
   DrumRack(float height, float width, const Vector2D &position);
   void paint() const override;
+  void handleEvents(GLFWwindow *window) const;
 
 private:
-  std::vector<DrumTrack> tracks;
+  mutable std::vector<DrumTrack> tracks;
   int num_tracks = 4;
 };
 

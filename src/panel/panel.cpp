@@ -33,6 +33,10 @@ void Panel::handleEvents(GLFWwindow *window) const
   // Update the last execution time
   lastExecutionTime = currentTime;
 
+  drumRack.handleEvents(window);
+  audioRack.handleEvents(window);
+  midiRack.handleEvents(window);
+
   // Arrow keys
   if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS)
   {
@@ -43,15 +47,18 @@ void Panel::handleEvents(GLFWwindow *window) const
   if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS)
   {
     bpmLabel.decreaseValue();
+    return;
   }
   if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS)
   {
     bpmLabel.increaseValue();
+    return;
   }
 
   // Recording
-  if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS && glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
+  if (glfwGetKey(window, GLFW_KEY_0) == GLFW_PRESS)
   {
     recordSign.changeActive();
+    return;
   }
 }

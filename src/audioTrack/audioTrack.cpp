@@ -13,7 +13,7 @@ void AudioTrack::paint() const
   glEnable(GL_BLEND);
   glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-  glColor4f(color.getR(), color.getG(), color.getB(), 0.8);
+  glColor4f(color.getR(), color.getG(), color.getB(), paintAlpha);
 
   // Begin drawing the square
   glBegin(GL_POLYGON);
@@ -28,4 +28,13 @@ void AudioTrack::paint() const
   glEnd();
 
   glDisable(GL_BLEND);
+}
+
+void AudioTrack::changeActive()
+{
+  active = !active;
+  if (active)
+    paintAlpha = 0.8;
+  else
+    paintAlpha = 0.2;
 }

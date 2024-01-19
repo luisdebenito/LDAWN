@@ -1,5 +1,4 @@
 #include <drumRack.h>
-#include <GLFW/glfw3.h>
 
 DrumRack::DrumRack(float height, float width, const Vector2D &position)
     : Paintable(height, width, position)
@@ -17,5 +16,17 @@ void DrumRack::paint() const
   for (const DrumTrack &track : tracks)
   {
     track.paint();
+  }
+}
+
+void DrumRack::handleEvents(GLFWwindow *window) const
+{
+  for (int i = 0; i < num_tracks; i++)
+  {
+    if (glfwGetKey(window, GLFW_KEY_1 + i) == GLFW_PRESS)
+    {
+      tracks[i].changeActive();
+      return;
+    }
   }
 }

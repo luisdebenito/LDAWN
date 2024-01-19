@@ -23,7 +23,7 @@ void DrumTrack::paint() const
   glEnable(GL_BLEND);
   glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-  glColor4f(color.getR(), color.getG(), color.getB(), 0.8);
+  glColor4f(color.getR(), color.getG(), color.getB(), paintAlpha);
 
   // Begin drawing the square
   glBegin(GL_POLYGON);
@@ -38,4 +38,13 @@ void DrumTrack::paint() const
   glEnd();
 
   glDisable(GL_BLEND);
+}
+
+void DrumTrack::changeActive()
+{
+  active = !active;
+  if (active)
+    paintAlpha = 0.0;
+  else
+    paintAlpha = 0.8;
 }
