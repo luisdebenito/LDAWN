@@ -9,6 +9,8 @@ public:
   BpmLabel(float height, float width, const Vector2D &position);
   void paint() const override;
   int getValue();
+  void increaseValue();
+  void decreaseValue();
 
 private:
   int value = 120;

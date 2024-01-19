@@ -34,9 +34,11 @@ int main()
 
     panel.paint();
 
+    panel.handleEvents(window);
+
     glfwSwapBuffers(window);
 
-    glfwPollEvents();
+    glfwWaitEvents();
   }
 
   // Terminate GLFW

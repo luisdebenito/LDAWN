@@ -1,15 +1,17 @@
 #include <recordSign.h>
 #include <GLFW/glfw3.h>
-#include <iostream>
 #include <cmath>
 
 RecordSign::RecordSign(float height, float width, const Vector2D &position)
     : Paintable(height, width, position, Color(0.5, 0.0, 0.0))
 {
+  active = false;
 }
 
 void RecordSign::paint() const
 {
+  if (!active)
+    return;
   glColor3d(color.getR(), color.getG(), color.getB());
   glBegin(GL_TRIANGLE_FAN);
   glVertex2f(position.getX(), position.getY()); // Center of circle
@@ -21,4 +23,9 @@ void RecordSign::paint() const
     glVertex2f(position.getX() + dx, position.getY() + dy);
   }
   glEnd();
+}
+
+void RecordSign::changeActive()
+{
+  active = !active;
 }
