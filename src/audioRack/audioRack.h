@@ -15,7 +15,7 @@ public:
 
 private:
   mutable std::vector<AudioTrack> tracks;
-  int num_tracks = 2;
+  int num_tracks = 3;
 };
 
 #endif // TRACK_H

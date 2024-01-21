@@ -21,12 +21,17 @@ void AudioRack::paint() const
 
 void AudioRack::handleEvents(GLFWwindow *window) const
 {
-  for (int i = 0; i < num_tracks; i++)
+  for (int i = 0; i < 2; i++)
   {
     if (glfwGetKey(window, GLFW_KEY_8 + i) == GLFW_PRESS)
     {
       tracks[i].changeActive();
       return;
     }
+  }
+  if (glfwGetKey(window, GLFW_KEY_0) == GLFW_PRESS)
+  {
+    tracks[num_tracks - 1].changeActive();
+    return;
   }
 }

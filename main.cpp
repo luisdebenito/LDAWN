@@ -22,7 +22,7 @@ int main()
     return -1;
   }
 
-  const Panel panel = Panel();
+  Panel panel = Panel();
 
   // Make the window's context current
   glfwMakeContextCurrent(window);
@@ -32,9 +32,9 @@ int main()
   {
     glClear(GL_COLOR_BUFFER_BIT);
 
-    panel.paint();
-
     panel.handleEvents(window);
+
+    panel.paint();
 
     glfwSwapBuffers(window);
 

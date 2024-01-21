@@ -2,7 +2,7 @@
 #include <GLFW/glfw3.h>
 
 BpmLabel::BpmLabel(float height, float width, const Vector2D &position)
-    : Paintable(height, width, position, Color(0.3, 0.0, 0.0))
+    : Paintable(height, width, position, Color(0.3, 0.3, 0.0))
 {
 }
 
@@ -41,17 +41,13 @@ void BpmLabel::paintSquares(const Vector2D &pos, float side) const
 void BpmLabel::increaseValue()
 {
   if (value >= 150)
-  {
     return;
-  }
   value++;
 }
 
 void BpmLabel::decreaseValue()
 {
   if (value <= 100)
-  {
     return;
-  }
   value--;
 }

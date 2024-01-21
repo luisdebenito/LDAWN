@@ -24,7 +24,6 @@ private:
   mutable BpmLabel bpmLabel;
   MidiRack midiRack;
   AudioRack audioRack;
-  PlayPointer playPointer;
   RecordPointer recordPointer;
   mutable RecordSign recordSign;
   const int humanReleaseIterationRetard = 25;

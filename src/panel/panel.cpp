@@ -3,9 +3,8 @@
 Panel::Panel() : Paintable(),
                  drumRack(0.7, 1.94, Vector2D(-0.97, 0.8)),
                  bpmLabel(0.12, 0.3, Vector2D(-0.15, 1)),
-                 midiRack(0.5, 1.94, Vector2D(-0.97, 0.04)),
-                 audioRack(0.4, 1.94, Vector2D(-0.97, -0.5)),
-                 playPointer(1.7, 0.002, Vector2D(-0.97, 0.8)),
+                 midiRack(0.5, 1.94, Vector2D(-0.97, 0.1)),
+                 audioRack(0.5, 1.94, Vector2D(-0.97, -0.4)),
                  recordPointer(0.05, 0.02, Vector2D(-0.99, 0.75)),
                  recordSign(0.02, 0.01, Vector2D(-0.5, 0.9))
 {
@@ -17,7 +16,6 @@ void Panel::paint() const
   bpmLabel.paint();
   midiRack.paint();
   audioRack.paint();
-  playPointer.paint();
   recordPointer.paint();
   recordSign.paint();
 }
@@ -56,7 +54,7 @@ void Panel::handleEvents(GLFWwindow *window) const
   }
 
   // Recording
-  if (glfwGetKey(window, GLFW_KEY_0) == GLFW_PRESS)
+  if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
   {
     recordSign.changeActive();
     return;

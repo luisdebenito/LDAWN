@@ -7,6 +7,7 @@ public:
   Vector2D(float x, float y);
   float getX() const;
   float getY() const;
+  void setX(float x_n);
 
 private:
   float x;
